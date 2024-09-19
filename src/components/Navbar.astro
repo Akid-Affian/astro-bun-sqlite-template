@@ -1,0 +1,42 @@
+---
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource-variable/kumbh-sans';
+---
+
+<style>
+    .kumbh-sans {
+        font-family: 'Kumbh Sans Variable', sans-serif;
+    }
+    .roboto {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+    }
+    .roboto-500 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+    }
+</style>
+
+<nav class="shadow-lg border-4 border-[#343333] dark:bg-[#ffffff] bg-[#262626] p-4 flex flex-wrap justify-between items-start sm:items-center rounded-md md:rounded-full">
+    <!-- Logo -->
+    <a href="/" class="kumbh-sans text-white text-2xl font-bold w-full sm:w-auto mb-4 sm:mb-0 ml-0 md:ml-4">
+        Confession
+    </a>
+
+    <!-- Buttons -->
+    <div class="flex flex-wrap gap-4 w-full sm:w-auto">
+        <a href="/" class="roboto flex items-center bg-[#6F05F0] hover:bg-[#6504DC] text-white px-4 py-2 rounded-lg">
+            Home
+        </a>
+        <a href="/um" class="roboto flex items-center bg-[#6F05F0] hover:bg-[#6504DC] text-white px-4 py-2 rounded-lg">
+            UM
+        </a>
+        <a href="/umcced" class="roboto flex items-center bg-[#6F05F0] hover:bg-[#6504DC] text-white px-4 py-2 rounded-lg">
+            UMCCED
+        </a>
+        <a href="/login" class="roboto-500 flex items-center bg-[#03DAC5] text-[#262626] hover:bg-[#03C4B1] px-6 py-2 rounded-full">
+            Login
+        </a>
+    </div>
+</nav>

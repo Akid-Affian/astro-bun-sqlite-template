@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "new-confession",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,8 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.15.7",
     "@astrojs/check": "^0.9.3",
+    "@astrojs/tailwind": "^5.1.1",
+    "@fontsource-variable/kumbh-sans": "^5.1.0",
+    "@fontsource/roboto": "^5.1.0",
+    "@nurodev/astro-bun": "^1.1.5",
+    "astro": "^4.15.7",
+    "tailwindcss": "^3.4.12",
     "typescript": "^5.6.2"
   }
 }

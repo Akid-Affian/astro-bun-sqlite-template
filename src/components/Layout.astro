@@ -1,0 +1,22 @@
+---
+import Navbar from "./Navbar.astro";
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+        <meta name="description" content="UM Confession is a platform for students to share their thoughts and feelings anonymously." />
+		<title>UM Confession - {title}</title>
+	</head>
+	<body class=" bg-[#404040]">
+		<div class="p-4">
+			<Navbar/>
+		</div>
+        <slot></slot>
+	</body>
+</html>
