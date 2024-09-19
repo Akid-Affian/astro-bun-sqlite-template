@@ -1,0 +1,27 @@
+---
+import Layout from "@components/Layout.astro";
+import DivCenter from "@components/DivCenter.astro";
+import H1 from "@components/H1.astro";
+import OAuthButton from "@components/OAuthButton.astro";
+
+export const prerender = true;
+---
+
+<Layout title="UM Confession">
+		<DivCenter>
+			<H1 className="text-3xl mt-10 mb-5">Authentication</H1>
+
+		</DivCenter>
+		<DivCenter>
+			<div class="flex flex-col">
+				<OAuthButton
+				iconName="google"
+				label="Continue with Google"
+			/>
+	<OAuthButton
+	iconName="telegram"
+	label="Continue with Telegram"
+/>
+</div>
+</DivCenter>
+</Layout>

@@ -6,7 +6,13 @@ import DivPadding from "@components/DivPadding.astro";
 import H1 from "@components/H1.astro";
 import Button from "@components/Button.astro";
 
-export const prerender = true;
+// Import the initDB function to initialize the database
+import { initDB } from '../lib/database/db';
+
+// Call the function to initialize the database
+initDB();
+
+export const prerender = false;
 ---
 
 <Layout title="UM Confession">
@@ -15,15 +21,14 @@ export const prerender = true;
 	</DivCenter>
 	<DivPadding padding="4">
 		<DivCenter>
-			<TextArea/>
+			<TextArea />
 		</DivCenter>
 	</DivPadding>
 	<DivPadding>
 		<DivCenter>
-			<Button ariaLabel="Submit Confession Button" className="bg-[#633CBE] text-white text-md font-semibold">
+			<Button ariaLabel="Submit Confession Button" className="bg-[#633CBE] text-gray-100 text-md font-semibold">
 				Submit
 			</Button>
 		</DivCenter>
 	</DivPadding>
-
 </Layout>
