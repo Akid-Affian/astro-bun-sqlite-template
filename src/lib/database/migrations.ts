@@ -43,6 +43,26 @@ const migrations = [
       `);
     },
   },
+  {
+    version: 2, // New migration version
+    up: () => {
+      // Alter the table by adding the columns
+      db.exec(`
+        ALTER TABLE users ADD COLUMN auth_token TEXT;
+      `);
+      db.exec(`
+        ALTER TABLE users ADD COLUMN auth_token_created_at INTEGER;
+      `);
+      db.exec(`
+        ALTER TABLE users ADD COLUMN role TEXT DEFAULT 'user';
+      `);
+
+      // Create a unique index on the auth_token column
+      db.exec(`
+        CREATE UNIQUE INDEX IF NOT EXISTS idx_auth_token ON users (auth_token);
+      `);
+    },
+  },
 ];
 
 export { migrations };

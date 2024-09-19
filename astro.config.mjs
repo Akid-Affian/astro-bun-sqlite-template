@@ -8,7 +8,7 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   adapter: bun(),
   server: {
-    host: import.meta.env.HOST || '0.0.0.0',
+    host: import.meta.env.HOST || '127.0.0.1',
     port: import.meta.env.PORT || 4321
   },
   experimental: {
