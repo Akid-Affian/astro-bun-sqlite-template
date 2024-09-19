@@ -1,5 +1,6 @@
 ---
-import Navbar from "./Navbar.astro";
+import Navbar from "@components/Navbar.astro";
+import { ViewTransitions } from 'astro:transitions';
 
 const { title } = Astro.props;
 ---
@@ -12,9 +13,10 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
         <meta name="description" content="UM Confession is a platform for students to share their thoughts and feelings anonymously." />
 		<title>UM Confession - {title}</title>
+		<ViewTransitions />
 	</head>
 	<body class=" bg-[#404040]">
-		<div class="p-4">
+		<div class="p-2">
 			<Navbar/>
 		</div>
         <slot></slot>

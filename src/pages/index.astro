@@ -1,10 +1,29 @@
 ---
-import Layout from "../components/Layout.astro";
+import Layout from "@components/Layout.astro";
+import TextArea from "@components/TextArea.astro";
+import DivCenter from "@components/DivCenter.astro";
+import DivPadding from "@components/DivPadding.astro";
+import H1 from "@components/H1.astro";
+import Button from "@components/Button.astro";
 
 export const prerender = true;
 ---
 
-<Layout title="Home">
-	<h1 class="text-white">Hello, Astro!</h1>
-	<p class="text-white">This is a simple Astro page.</p>
+<Layout title="UM Confession">
+	<DivCenter>
+	<H1 className="text-3xl mt-10 mb-5">UM Confession</H1>
+	</DivCenter>
+	<DivPadding padding="4">
+		<DivCenter>
+			<TextArea/>
+		</DivCenter>
+	</DivPadding>
+	<DivPadding>
+		<DivCenter>
+			<Button ariaLabel="Submit Confession Button" className="bg-[#633CBE] text-white text-md font-semibold">
+				Submit
+			</Button>
+		</DivCenter>
+	</DivPadding>
+
 </Layout>

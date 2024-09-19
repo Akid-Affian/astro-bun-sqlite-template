@@ -1,0 +1,15 @@
+---
+import '@fontsource-variable/kumbh-sans';
+
+const { color = '#ffffff', className = '' } = Astro.props; // Default color is white, className is optional
+---
+
+<style>
+  .kumbh-sans {
+    font-family: 'Kumbh Sans Variable', sans-serif;
+  }
+</style>
+
+<h1 class={`kumbh-sans ${className}`} style={`color: ${color};`}>
+  <slot></slot>
+</h1>
