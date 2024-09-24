@@ -1,4 +1,4 @@
-import { db } from './db';
+import { db } from '@lib/database/db';
 
 const migrations = [
   {
@@ -60,6 +60,15 @@ const migrations = [
       // Create a unique index on the auth_token column
       db.exec(`
         CREATE UNIQUE INDEX IF NOT EXISTS idx_auth_token ON users (auth_token);
+      `);
+    },
+  },
+  {
+    version: 3, // New migration to add the email column
+    up: () => {
+      // Add 'email' column to the users table
+      db.exec(`
+        ALTER TABLE users ADD COLUMN email TEXT;
       `);
     },
   },

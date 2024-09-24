@@ -15,12 +15,14 @@ export const prerender = true;
 		<DivCenter>
 			<div class="flex flex-col">
 				<OAuthButton
+				url="/api/v1/auth"
 				iconName="google"
 				label="Continue with Google"
 			/>
 	<OAuthButton
-	iconName="telegram"
-	label="Continue with Telegram"
+	url="/api/v1/auth-fb"
+	iconName="facebook"
+	label="Continue with Facebook"
 />
 </div>
 </DivCenter>

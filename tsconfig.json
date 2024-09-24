@@ -11,7 +11,10 @@
       ],
       "@mytypes/*": [
         "src/types/*"
-      ]
+      ],
+      "@lib/database/*": [
+        "src/lib/database/*"
+      ],
     }
   }
 }

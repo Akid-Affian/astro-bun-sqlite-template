@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { db, dbPath, dbName } from './db';
+import { db, dbPath, dbName } from '@lib/database/db';
 
 function backupDatabase() {
   if (fs.existsSync(dbPath)) {

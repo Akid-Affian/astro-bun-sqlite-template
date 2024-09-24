@@ -2,8 +2,8 @@ import { Database } from "bun:sqlite";
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-import { migrations } from './migrations';
-import { backupDatabase } from './backup';
+import { migrations } from '@lib/database/migrations';
+import { backupDatabase } from '@lib/database/backup';
 
 const dataDir = path.join(process.cwd(), 'data');
 if (!fs.existsSync(dataDir)) {
