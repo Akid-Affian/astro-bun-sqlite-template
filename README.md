@@ -9,5 +9,6 @@ Welcome to the Astro + Bun + SQLite Fullstack Starter Kit! This is my favourite 
 To get started, clone this repository to your local machine:
 
 ```bash
-git clone <later>
-cd <later>
+git clone https://github.com/Akid-Affian/astro-bun-sqlite-template.git
+cd astro-bun-sqlite-template
+```
