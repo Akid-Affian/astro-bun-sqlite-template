@@ -7,13 +7,20 @@ const migrations = [
       db.exec(`
         CREATE TABLE IF NOT EXISTS users (
           id INTEGER PRIMARY KEY AUTOINCREMENT,
-          username TEXT UNIQUE NOT NULL,
-          password TEXT NOT NULL,
-          created_at INTEGER NOT NULL,
-          updated_at INTEGER NOT NULL
+          username TEXT UNIQUE,
+          password TEXT,
+          created_at INTEGER NOT NULL
         );
       `);
-    }
+    },
+  },
+  {
+    version: 2,
+    up: () => {
+      db.exec(`
+        ALTER TABLE users ADD COLUMN email TEXT;
+      `);
+    },
   },
 ];
 

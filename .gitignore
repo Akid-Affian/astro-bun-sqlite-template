@@ -22,3 +22,10 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+dev.db
+prod.db
+
+# Ignore database backups
+backups/dev.db.backup-*.db
+backups/prod.db.backup-*.db
