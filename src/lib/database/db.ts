@@ -26,7 +26,6 @@ export const dbPath =
 // Initialize the database
 export const db = new Database(dbPath);
 
-// Create a schema_migrations table to track migrations
 db.exec(`
   CREATE TABLE IF NOT EXISTS schema_migrations (
     version INTEGER PRIMARY KEY,
